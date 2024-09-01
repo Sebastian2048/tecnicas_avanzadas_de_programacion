@@ -38,8 +38,13 @@ class Vehiculo():
             print (f"el vehiculo patente {self.patente} no acelero y mantiene velocidad de {self.__kmxhora} km/h")
                      
     def stop(self):
-        self.__enmarcha = False
-        self.__estacionado = True
+        if (self.__enmarcha = True):
+            self.__enmarcha = False
+            self.__estacionado = True
+            print("el Vehiculo a parado")
+        else:
+            print("el Vehiculo sigue en movimiento")
+
         
     def circulando(self):
         return self.__enmarcha
