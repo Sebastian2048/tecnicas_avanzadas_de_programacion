@@ -36,41 +36,19 @@ class Vehiculo():
             print(f"el vehiculo patente {self.patente} acelero y ahora va a {self.__kmxhora} km/h")
         else: 
             print (f"el vehiculo patente {self.patente} no acelero y mantiene velocidad de {self.__kmxhora} km/h")
-                     
+
     def stop(self):
-        if (self.__enmarcha = True):
+        if self.__enmarcha:
             self.__enmarcha = False
             self.__estacionado = True
-            print("el Vehiculo a parado")
+            self.__kmxhora = 0  # Añadir para poner la velocidad a 0 al detenerse
+            print("El vehículo ha parado.")
         else:
-            print("el Vehiculo sigue en movimiento")
+            print("El vehículo sigue en movimiento.")
 
-        
     def circulando(self):
         return self.__enmarcha
     
     def estacionado(self):
         return self.__estacionado
-        
-#main
-#Camion = Vehiculo("AB432WM","fiat", "siena")
-#print(Camion)
-
-#Camion.chequeo()
-
-
-#Camion.arrancar()
-
-#Camion.acelerar()
-#Camion.acelerar()
-#Camion.acelerar()
-
-
-#Camion.circulando()
-#if (Camion.circulando()):
-    #print("el vehiculo esta en movimiento")
-#else: 
-    #print("el vehiculo no se mueve")
-
-#if Camion.estacionado():
-    #print("el camion estaciono")
+    
