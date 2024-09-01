@@ -1,5 +1,4 @@
 from Vehiculo import *
-
 class Furgoneta(Vehiculo):
     
     def __init__(self, patente, marca, modelo) -> None:
@@ -13,14 +12,14 @@ class Furgoneta(Vehiculo):
         return super().chequeo() and self.carga >= 0 and self.carga <= 1000
     
     def cargarfurgoneta(self,cargaenkilos):
-        if self.chequeo() and (1000 - self.carga) >= cargaenkilos :
+        if self.chequeo() and ((1000 - self.carga) >= cargaenkilos) :
             self.carga += cargaenkilos
             print("usted aun puede cargar" + int(1000-cargaenkilos) + " kilos")
         else:
             print("no se puede cargar debido a problemas en los limites de carga")
     
     def descargarfurgoneta(self, cargaenkilos):
-        if self.chequeo and self.carga >= cargaenkilos:
+        if self.chequeo () and self.carga >= cargaenkilos:
             self.carga -= cargaenkilos
         else: 
             print(f"problemas en el limite de descarga, usted solo puede descargar {self.carga}")
@@ -30,7 +29,6 @@ Parner = Furgoneta("INF013","peugeot","patagonia")
 print(Parner)
 
 Parner.chequeo()
-
 
 Parner.arrancar()
 
@@ -49,10 +47,10 @@ else:
 if Parner.estacionado():
     print("el vehiculo estaciono")
 
-Parner.stop
+Parner.stop()
 
-cargaenkilos = 300
+cargaenkilos = 200
 
-Parner.cargarfurgoneta(300)
+Parner.cargarfurgoneta(320)
 
 Parner.descargarfurgoneta(120)
